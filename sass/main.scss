@@ -1,6 +1,6 @@
-//@import "variables";
-//@import "mixins";
-@import "queries";
+@import "variables";
+@import "mixins";
+
 *{
     padding:$padding0;
     margin: 0;
@@ -215,3 +215,4 @@ footer {
 	}
 	
 }
+@import "queries";
