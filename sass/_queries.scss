@@ -36,11 +36,11 @@
 		}
 	}
 	section {
-		.focal,.content1,.content2 {
+		&.focal, &.content1, &.content2 {
 				@include size(700px);
 			}
 			
-		.content2 {
+		&.content2 {
 				
 			h4,li {
 				font-size: $fontS5;
@@ -68,9 +68,7 @@
 		}
 	}
 	.col-4 {
-		width:50%;
-		float:left;
-		
+		@include col-size(2);
 	}
 }
 
@@ -111,13 +109,16 @@
 	%all-size1 {
 		@include size(900px);
 	}
-	section {
-		
-		.focal{
-			@extend %all-size1;
-			%size3 {
+	
+	%size3 {
 				@include size(600px);
 			}
+	
+	section {
+		
+		&.focal{
+			@extend %all-size1;
+			
 			h2{
 				@extend %size3;
 				
@@ -127,8 +128,8 @@
 			}
 			
 		}
-		.content1 {
-			@extencd %all-size1;
+		&.content1 {
+			@extend %all-size1;
 			h3 {
 				font-size: $fontS4;
 				font-weight: $fontW1;
@@ -138,7 +139,7 @@
 				}
 			}
 		}
-		.content2 {
+		&.content2 {
 			@extend %all-size1;
 			h4,li {
 				font-size: $fontS5;
@@ -151,13 +152,13 @@
 		}
 	}
 	.col-3 {
-		@include col-style(30%,5%);
+		@include col-size(3);
 		&:first-child {
 			margin-left: 0;
 		}
 	}
 	.col-4 {
-		@include col-style(22%, 4%);
+		@include col-size(4);
 		&:first-child {
 			margin-left: 0;
 		}
@@ -215,19 +216,19 @@
 	}
 	section {
 		
-		.focal {
+		&.focal {
 			@extend %all-size;
 			h2 {
 				@include size(600px);
 				font-size: $fontS2;
 			}
 			p {
-				.author {
+				&.author {
 					@include size(600px);
 				}
 			}
 		}
-		.content1 {
+		&.content1 {
 			@extend %all-size;
 			h3 {
 				font-size: $fontS3;
@@ -239,7 +240,7 @@
 				}
 			}
 		}
-		.content2 {
+		&.content2 {
 			@extend %all-size;
 			h4, li {
 				font-size: $fontS4;
@@ -251,11 +252,11 @@
 		}
 	}
 	.col-3 {
-		@include col-style(30%,5%);
+		@include col-size(3);
 		&:first-child { margin-left:0;}
 	}
 	.col-4 {
-		@include col-style(22%, 4%);
+		@include col-size(4);
 		&:first-child {margin-left: 0;}
 	}
 	footer {

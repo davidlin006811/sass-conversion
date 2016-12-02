@@ -50,6 +50,19 @@
 	float:left;
 	margin-left:$margin;
 }
+@mixin col-size($list) {
+	@if $list == 2 {
+		width:(100% /$list);
+	}
+	@else {
+		$col-width: floor((100% / $list)) - 3%;
+		$col-margin: (100% -$col-width * $list)/($list - 1);
+		width:$col-width;
+		margin-left: $col-margin;
+	}
+	float:left;
+	
+}
 @mixin border-style {
 	border:none;
 	border-left: $grey-border;
