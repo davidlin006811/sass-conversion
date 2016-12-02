@@ -1,4 +1,8 @@
-
+@mixin max-screen($res) {
+	@media #{$res} {
+		@content;
+	}
+}
 
 @mixin size($width) {
 	width: $width;

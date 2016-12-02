@@ -31,8 +31,8 @@ ul {
 	}
 }
 .bg-header {
-	@extend .bg-white;
-	@extend .bg-blue;
+	background-color: $white;
+	background-color: $lightBlue;
 	color: $darkGrey;
 	border-bottom: 1rem solid $medBlue;
 	border-top: 1rem solid $darkBlue;
@@ -54,19 +54,19 @@ ul {
 	}
 }
 .bg-focal {
-	@extend .bg-brown;
+	background-color: $lightBrown;
 	color: $darkBrown;
 }
 .bg-content1 {
-	@extend .bg-white;
+	background-color: $white;
 	color: $darkGrey;
 }
 .bg-content2 {
-	@extend .bg-blue;
+	background-color:$lightBlue;
 	color: $darkBlue;
 }
 .bg-footer {
-	@extend .bg-white;
+	background-color: $white;
 	color: $lightGrey;
 }
 header {
@@ -203,7 +203,7 @@ footer {
     }
 	p {
 		@include font-style($fontS6, $padding10);
-		@extend .fa-circle;
+		color: $darkGrey;
 	}
 	h4[lang=de] {
 		display: block;

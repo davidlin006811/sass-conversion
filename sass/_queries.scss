@@ -1,7 +1,7 @@
 @import "variables";
 @import "mixins";
 
-@media #{$middle} {
+@include max-screen($middle) {
 	header {
 		@include size(700px);
 		min-height: 8rem;
@@ -12,7 +12,7 @@
 		h1 {
 			@include h1-style($darkBrown);
 			i.fa-lg {
-				@include falg($darkBrown, fontS1, lineH1);
+				@include falg($darkBrown, $fontS1, $lineH1);
 				~ span {
 					@include falgSpan;
 				}
@@ -26,26 +26,26 @@
 					> a {
 						@include liA($fontS6, 2rem, 6rem, 1.0rem, $white);
 					    @include border-style;
-				    }
-				    &:last-child a {
-					    border-right: $grey-border;
+				    
+				        &:last-child  {
+							border-right: $grey-border;
+				        }
 				    }
 				}
 			}
 		}
 	}
 	section {
-		
-			.focal,.content1,.content2 {
+		.focal,.content1,.content2 {
 				@include size(700px);
 			}
 			
-			.content2 {
+		.content2 {
 				
-				h4,li {
-					font-size: $fontS5;
-				}
+			h4,li {
+				font-size: $fontS5;
 			}
+		}
 	}
 	footer {
 		@include size(700px);
@@ -74,7 +74,7 @@
 	}
 }
 
-@media #{$large} {
+@include max-screen($large) {
 	header {
 		@include size(900px);
 		&:before,
@@ -84,7 +84,7 @@
 		h1 {
 			@include h1-style($darkBlue);
 			i.fa-lg {
-				@include falg($darkBlue, fontS1, lineH1);
+				@include falg($darkBlue, $fontS1, $lineH1);
 				~ span {
 					@include falgSpan;
 				}
@@ -95,9 +95,10 @@
 			> ul {
 				> li {
 					@include headerLi;
-				    background-color: $white;
+					background-color: $white;
 				    > a {
 						@include liA($fontS6, 2rem, 2rem, 0 1.0rem, $white);
+						margin: 1rem 0;
 					    @include border-style;
 				    }
 				  	&:first-child a {
@@ -107,22 +108,27 @@
 			}
 		}
 	}
-	
+	%all-size1 {
+		@include size(900px);
+	}
 	section {
-		.focal, .content1, .content2 {
-			@include size(900px);
-		}
+		
 		.focal{
-			h2 {
+			@extend %all-size1;
+			%size3 {
 				@include size(600px);
 			}
-			p {
-				.author{
-					@include size(600px);
-				}
+			h2{
+				@extend %size3;
+				
 			}
+			p.author {
+				@extend %size3;
+			}
+			
 		}
 		.content1 {
+			@extencd %all-size1;
 			h3 {
 				font-size: $fontS4;
 				font-weight: $fontW1;
@@ -133,6 +139,7 @@
 			}
 		}
 		.content2 {
+			@extend %all-size1;
 			h4,li {
 				font-size: $fontS5;
 			}
@@ -169,7 +176,7 @@
 	}
 }
 
-@media #{$extra-large} {
+@include max-screen($extra-large) {
 	header {
 		@include size(1400px);
 		&:before,
@@ -179,7 +186,7 @@
 		h1 {
 			@include h1-style($darkBrown);
 			i.fa-lg {
-				@include falg($darkBrown, fontS1, lineH1);
+				@include falg($darkBrown, $fontS1, $lineH1);
 				~ span {
 					@include falgSpan;
 				}
@@ -193,6 +200,7 @@
 					background-color: $white;
 					> a {
 						@include liA($fontS5, 2rem, 2rem, 0 1.0rem, $white);
+						margin: 1rem 0;
 					    @include border-style;
 					}
 					&:first-child a {
@@ -202,11 +210,13 @@
 			}
 		}
 	}
+	%all-size {
+		@include size(1400px);
+	}
 	section {
-		.focal, .content1, .content2 {
-			@include size(1400px);
-		}
+		
 		.focal {
+			@extend %all-size;
 			h2 {
 				@include size(600px);
 				font-size: $fontS2;
@@ -218,6 +228,7 @@
 			}
 		}
 		.content1 {
+			@extend %all-size;
 			h3 {
 				font-size: $fontS3;
 				font-weight: $fontW1;
@@ -229,10 +240,8 @@
 			}
 		}
 		.content2 {
-			h4 {
-				font-size: $fontS4;
-			}
-			li {
+			@extend %all-size;
+			h4, li {
 				font-size: $fontS4;
 			}
 			p {

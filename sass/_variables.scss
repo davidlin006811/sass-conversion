@@ -26,10 +26,6 @@ $fontW1: 100;
 $fontW2: 400;
 $fontW3: 700;
 
-$width1: 400px;
-$width2: 700px;
-
-
 
 $middle: "all and (min-width:701px) and (max-width:900px)";
 $large: "all and (min-width:901px) and (max-width: 1400px)";
@@ -37,15 +33,6 @@ $extra-large: "all and (min-width:1401px)";
 
 $grey-border: 1px solid $lightGrey;
 
-.bg-white {
-	background-color: $white;
-}
-.bg-blue {
-	background-color:$lightBlue;
-}
-.bg-brown {
-	background-color: $lightBrown;
-}
 
 $padding0: 0;
 $padding1: 1rem;
