@@ -1,0 +1,273 @@
+@import "variables";
+@import "mixins";
+
+@media #{$middle} {
+	header {
+		@include size(700px);
+		min-height: 8rem;
+		&:before,
+		&:after {
+			width: 230px;
+		}
+		h1 {
+			@include h1-style($darkBrown);
+			i.fa-lg {
+				@include falg($darkBrown, fontS1, lineH1);
+				~ span {
+					@include falgSpan;
+				}
+			}
+		}
+		nav {
+			@include  headerNav;
+			> ul {
+				>li {
+					@include headerLi;
+					> a {
+						@include liA($fontS6, 2rem, 6rem, 1.0rem, $white);
+					    @include border-style;
+				    }
+				    &:last-child a {
+					    border-right: $grey-border;
+				    }
+				}
+			}
+		}
+	}
+	section {
+		
+			.focal,.content1,.content2 {
+				@include size(700px);
+			}
+			
+			.content2 {
+				
+				h4,li {
+					font-size: $fontS5;
+				}
+			}
+	}
+	footer {
+		@include size(700px);
+		.fa-circle {
+			color:$medBlue;
+		}
+		.col-2 {
+			&:last-child {
+				unicode-bidi: bidi-override;
+				direction: rtl;
+			}
+		}
+		h4[lang=ar] {
+			display: block;
+		}
+		h4[lang=de],
+		h4[lang=en],
+		h4[lang=ru] {
+			display: none;
+		}
+	}
+	.col-4 {
+		width:50%;
+		float:left;
+		
+	}
+}
+
+@media #{$large} {
+	header {
+		@include size(900px);
+		&:before,
+		&:after {
+			width: 300px;
+		}
+		h1 {
+			@include h1-style($darkBlue);
+			i.fa-lg {
+				@include falg($darkBlue, fontS1, lineH1);
+				~ span {
+					@include falgSpan;
+				}
+			}
+		}
+		nav {
+			@include  headerNav;
+			> ul {
+				> li {
+					@include headerLi;
+				    background-color: $white;
+				    > a {
+						@include liA($fontS6, 2rem, 2rem, 0 1.0rem, $white);
+					    @include border-style;
+				    }
+				  	&:first-child a {
+					    border-left:none;
+				    }
+				}
+			}
+		}
+	}
+	
+	section {
+		.focal, .content1, .content2 {
+			@include size(900px);
+		}
+		.focal{
+			h2 {
+				@include size(600px);
+			}
+			p {
+				.author{
+					@include size(600px);
+				}
+			}
+		}
+		.content1 {
+			h3 {
+				font-size: $fontS4;
+				font-weight: $fontW1;
+				.fa-2x {
+					font-size: $fontS4;
+					padding-right: 1rem;
+				}
+			}
+		}
+		.content2 {
+			h4,li {
+				font-size: $fontS5;
+			}
+			p {
+				font-size: $fontS6;
+				font-weight: $fontW2;
+			}
+			
+		}
+	}
+	.col-3 {
+		@include col-style(30%,5%);
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+	.col-4 {
+		@include col-style(22%, 4%);
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+	footer {
+		@include size(900px);
+		.fa-circle {
+			color: $lightBrown;
+		}
+		h4[lang=ru] {
+			display: block;
+		}
+		h4[lang=de],h4[lang=ar],h4[lang=en] {
+			display: none;
+		}
+	}
+}
+
+@media #{$extra-large} {
+	header {
+		@include size(1400px);
+		&:before,
+		&:after {
+			width:450px;
+		}
+		h1 {
+			@include h1-style($darkBrown);
+			i.fa-lg {
+				@include falg($darkBrown, fontS1, lineH1);
+				~ span {
+					@include falgSpan;
+				}
+			}
+		}
+		nav {
+			@include  headerNav;
+			> ul {
+				> li {
+					@include headerLi;
+					background-color: $white;
+					> a {
+						@include liA($fontS5, 2rem, 2rem, 0 1.0rem, $white);
+					    @include border-style;
+					}
+					&:first-child a {
+						border-left: none;
+					}
+				}
+			}
+		}
+	}
+	section {
+		.focal, .content1, .content2 {
+			@include size(1400px);
+		}
+		.focal {
+			h2 {
+				@include size(600px);
+				font-size: $fontS2;
+			}
+			p {
+				.author {
+					@include size(600px);
+				}
+			}
+		}
+		.content1 {
+			h3 {
+				font-size: $fontS3;
+				font-weight: $fontW1;
+				.fa-2x {
+					font-size: $fontS3;
+					padding-right: $fontS6;
+					vertical-align: middle;
+				}
+			}
+		}
+		.content2 {
+			h4 {
+				font-size: $fontS4;
+			}
+			li {
+				font-size: $fontS4;
+			}
+			p {
+				font-size: $fontS5;
+				font-weight: $fontW2;
+			}
+		}
+	}
+	.col-3 {
+		@include col-style(30%,5%);
+		&:first-child { margin-left:0;}
+	}
+	.col-4 {
+		@include col-style(22%, 4%);
+		&:first-child {margin-left: 0;}
+	}
+	footer {
+		p {
+			font-size: $fontS5;
+			letter-spacing: 0.2rem;
+			&:last-child {
+				color: $lightGrey;
+			}
+		}
+		.fa-circle {
+			color: $medBlue;
+		}
+		h4[lang=en] {
+			display:block;
+		}
+		h4[lang=de], h4[lang=ar], h4[lang=ru] {
+			display:none;
+		}
+	}
+}
+
+
+

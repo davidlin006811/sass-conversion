@@ -1,0 +1,63 @@
+
+$fontFm1 : 'Josefin Sans', ‘Trebuchet MS’, Helvetica, sans-serif;
+$fontFm2: Cardo, ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+$lightBlue: #C7F7FF;
+$medBlue: #89C0C9;
+$darkBlue: #3a5E63;
+$lightBrown: #C9A689;
+$darkBrown :  #7C593C;
+$lightGrey:  #d4d4d4;
+$darkGrey : #222;
+$white : #fff;
+
+$fontS0: 7rem;
+$fontS1: 4rem;
+$fontS2: 3.998rem;
+$fontS3: 2.827rem;
+$fontS4: 1.999rem;
+$fontS5: 1.414rem;
+$fontS6: 1rem;
+$fontStan: 16px;
+
+$lineH0: 12.7936rem;
+$lineH1: 6.3968rem;
+
+$fontW1: 100;
+$fontW2: 400;
+$fontW3: 700;
+
+$width1: 400px;
+$width2: 700px;
+
+
+
+$middle: "all and (min-width:701px) and (max-width:900px)";
+$large: "all and (min-width:901px) and (max-width: 1400px)";
+$extra-large: "all and (min-width:1401px)";
+
+$grey-border: 1px solid $lightGrey;
+
+.bg-white {
+	background-color: $white;
+}
+.bg-blue {
+	background-color:$lightBlue;
+}
+.bg-brown {
+	background-color: $lightBrown;
+}
+
+$padding0: 0;
+$padding1: 1rem;
+$padding1a: 1.0rem 2rem;
+$padding2: 0 2em;
+$padding3: 0.2rem 2rem 2rem;
+$padding4: 2rem;
+$padding5: 2rem 2rem 1rem 2rem;
+$padding6: 0.5rem 2rem 2rem;
+$padding7: 1rem 2rem 0.5rem;
+$padding8: 1rem 2rem 0rem;
+$padding9: 0.5rem 2rem 1rem;
+$padding10: 0.5rem 2rem; 
+
+

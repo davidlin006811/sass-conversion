@@ -1,0 +1,57 @@
+
+
+@mixin size($width) {
+	width: $width;
+	margin: 0 auto;
+}
+@mixin falg($color, $fSize, $lHeight) {
+	display:inline;
+	color:$color;
+	vertical-align: baseline;
+	float:none;
+	font-size: $fSize;
+	line-height: $lHeight;
+}
+@mixin falgSpan {
+	float:none;
+	letter-spacing: 0.25rem;
+	font-size: 3.998rem;
+	text-align: left;
+}
+@mixin headerNav {
+	position: static;
+    clear:both;
+    width: 100%;
+    padding: 0;
+}
+@mixin headerLi {
+	width:20%;
+    float: left;
+}
+@mixin liA($fsize, $lineHeight, $minHeight, $padding, $bgColor) {
+	font-size: $fsize;
+	line-height: $lineHeight;
+	min-height: $minHeight;
+	padding: $padding;
+	background-color: $bgColor
+}
+
+@mixin h1-style($color) {
+	width: 100%;
+	color: $color;
+}
+
+@mixin col-style($width, $margin) {
+	width:$width;
+	float:left;
+	margin-left:$margin;
+}
+@mixin border-style {
+	border:none;
+	border-left: $grey-border;
+}
+@mixin font-style($font-size, $padding) {
+	font-size: $font-size;
+    padding: $padding;
+}
+
