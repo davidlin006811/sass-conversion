@@ -189,7 +189,7 @@ section {
 }
 footer {
 	
-	padding:$padding4,$padding0;
+	padding:$padding4 $padding0;
 	.col-2 {
 		&:first-child {
 			border-left: 0;
@@ -205,6 +205,8 @@ footer {
 	p {
 		@include font-style($fontS6, $padding10);
 		color: $darkGrey;
+		&:last-child {			
+		}
 	}
 	h4[lang=de] {
 		display: block;
